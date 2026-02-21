@@ -17,26 +17,44 @@
 </head>
 
 <body>
-    <main class="my-3 mx-4 sm:my-8 sm:mx-32 lg:my-16 lg:mx-60">
+    <main class="my-3 mx-5 sm:my-8 sm:mx-32 lg:my-16 lg:mx-60">
         <header class="mb-8">
             <p class="text-center lg:text-left text-xl lg:text-3xl text-[#002C5C] font-bold ">Job Application Tracker
             </p>
-            <div class="mt-2 lg:mt-5 flex gap-2 lg:gap-4 justify-between">
+            <div class="mt-2 lg:mt-5 grid grid-cols-3 gap-2 lg:gap-4 justify-between">
                 <div class="m-2 lg:m-5">
-                    <h6 class="font-medium text-[#323B49] text-[14px] mb-2 ">Total</h6>
-                    <p class="text-[#002C5C] text-xl lg:text-2xl font-bold ">8</p>
+                    <h6 class="text-center lg:text-left font-medium text-[#323B49] text-[14px] mb-2 ">Total</h6>
+                    <p class="text-center lg:text-left text-[#002C5C] text-xl lg:text-2xl font-bold ">8</p>
                 </div>
                 <div class="m-2 lg:m-5">
-                    <h6 class="font-medium text-[#323B49] text-[14px] mb-2 ">Interview</h6>
-                    <p class="text-[#10B981] text-xl lg:text-2xl font-bold ">0</p>
+                    <h6 class="text-center lg:text-left font-medium text-[#323B49] text-[14px] mb-2 ">Interview</h6>
+                    <p class="text-center lg:text-left text-[#10B981] text-xl lg:text-2xl font-bold ">0</p>
                 </div>
                 <div class="m-2 lg:m-5">
-                    <h6 class="font-medium text-[#323B49] text-[14px] mb-2 ">Rejected</h6>
-                    <p class="text-[#EF4444] text-xl lg:text-2xl font-bold ">0</p>
+                    <h6 class="text-center lg:text-left font-medium text-[#323B49] text-[14px] mb-2 ">Rejected</h6>
+                    <p class="text-center lg:text-left text-[#EF4444] text-xl lg:text-2xl font-bold ">0</p>
                 </div>
             </div>
         </header>
+        <section class="available-jobs mt-7">
+            <div class="flex justify-between mb-6">
+                <h6 class="text-[#002C5C] font-semibold text-lg">Available Jobs</h6>
+                <h6 class="text-[#64748B] font-medium "><span>8</span> jobs</h6>
+            </div>
+            <div class="flex justify-start">
+                <div class="grid grid-cols-3 gap-2 ">
+                    <button class="bg-[#3B82F6] py-2 px-3 rounded-sm " type="button">All</button>
+                    <button class=" py-2 px-3 rounded-sm " type="button">Interview</button>
+                    <button class="py-2 px-3 rounded-sm " type="button">Rejected</button>
+                </div>
+            </div>
+            <div id="jobs-card-list">
 
+            </div>
+
+
+
+        </section>
     </main>
 
 </body>
