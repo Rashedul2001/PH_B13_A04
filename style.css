@@ -3,3 +3,23 @@
 * {
     font-family: "Geist", sans-serif;
 }
+
+.bg-white-color {
+    background-color: #EEF4FF;
+}
+
+.black-color {
+    color: #002C5C;
+}
+
+.gray-color {
+    color: #64748B;
+}
+
+.green-color {
+    color: #10B981;
+}
+
+.red-color {
+    color: #EF4444;
+}
