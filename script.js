@@ -1,4 +1,4 @@
-
+console.log("script loaded");
 const allList = document.getElementById("all-list");
 const interviewList = document.getElementById("interview-list");
 const rejectedList = document.getElementById("rejected-list");
@@ -56,6 +56,12 @@ function maintainNoJob() {
         rejectedList.querySelector(".no-job").classList.remove("hidden");
     } else {
         rejectedList.querySelector(".no-job").classList.add("hidden");
+    }
+
+    // for now I'm showing any no job card it could be just one by the way
+    if (totalCount == 0) {
+        const noJob = interviewList.querySelector(".no-job").cloneNode(true);
+        allList.appendChild(noJob);
     }
 }
 
