@@ -71,11 +71,27 @@ function maintainListCount() {
 
 }
 
+
+function showStatus(id, status) {
+    const cardList = document.querySelectorAll(`div [data-card-id = "${id}"]`);
+    cardList.forEach(card => {
+        const btn = card.querySelector(".status");
+        if (status === "in") {
+            btn.innerText = "Interview";
+            btn.classList.remove("bg-white-color", "bg-red-500");
+            btn.classList.add("bg-green-500", "text-white");
+        }
+        if (status === "re") {
+            btn.innerText = "Rejected";
+            btn.classList.remove("bg-white-color", "bg-green-500");
+            btn.classList.add("bg-red-500", "text-white");
+        }
+    });
+}
+
 function handleCardClick(target) {
     const card = target.closest(".card");
-    const copyCard = card.cloneNode(true);
     const id = card.getAttribute("data-card-id");
-
     //delete functionality 
     if (target.classList.contains("fa-trash-can")) {
         document.querySelectorAll(`div[data-card-id="${id}"]`).forEach(el => el.remove());
@@ -86,14 +102,18 @@ function handleCardClick(target) {
     }
 
     if (target.classList.contains("interview-btn")) {
-
+        showStatus(id, "in");
+        const copyCard = card.cloneNode(true);
         if (!interviewList.querySelector(`div [data-card-id = "${id}"]`))
             interviewList.appendChild(copyCard);
         if (rejectedList.querySelector(`div [data-card-id = "${id}"]`))
             rejectedList.querySelector(`div [data-card-id = "${id}"]`).remove();
+
     }
 
     if (target.classList.contains("rejected-btn")) {
+        showStatus(id, "re");
+        const copyCard = card.cloneNode(true);
         if (!rejectedList.querySelector(`div [data-card-id = "${id}"]`))
             rejectedList.appendChild(copyCard);
         if (interviewList.querySelector(`div [data-card-id = "${id}"]`))
