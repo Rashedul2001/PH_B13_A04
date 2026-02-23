@@ -35,18 +35,24 @@
                 </div>
                 <div class="m-2 lg:m-5">
                     <h6 class="text-center lg:text-left font-medium text-[#323B49] text-[14px] mb-2 ">Interview</h6>
-                    <p class="text-center lg:text-left text-[#10B981] text-xl lg:text-2xl font-bold ">0</p>
+                    <p class="text-center lg:text-left text-[#10B981] text-xl lg:text-2xl font-bold "
+                        id="interview-count">0
+                    </p>
                 </div>
                 <div class="m-2 lg:m-5">
                     <h6 class="text-center lg:text-left font-medium text-[#323B49] text-[14px] mb-2 ">Rejected</h6>
-                    <p class="text-center lg:text-left text-[#EF4444] text-xl lg:text-2xl font-bold ">0</p>
+                    <p class="text-center lg:text-left text-[#EF4444] text-xl lg:text-2xl font-bold "
+                        id="rejected-count">0
+                    </p>
                 </div>
             </div>
         </header>
         <section class=" mt-7 ">
             <div class="flex justify-between mb-6">
                 <h6 class="text-[#002C5C] font-semibold text-lg">Available Jobs</h6>
-                <h6 class="text-[#64748B] font-medium "><span class="total-count">8</span> jobs</h6>
+                <h6 class="text-[#64748B] font-medium "><span id="interviewTabCnt" class="hidden"></span> <span
+                        id="rejectedTabCnt" class="hidden"></span><span class="total-count">8</span>
+                    jobs</h6>
             </div>
             <div class="flex justify-start">
                 <div class="grid grid-cols-3 gap-2 ">
