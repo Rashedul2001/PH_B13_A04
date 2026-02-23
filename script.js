@@ -99,7 +99,7 @@ function handleCardClick(target) {
     const card = target.closest(".card");
     const id = card.getAttribute("data-card-id");
     //delete functionality 
-    if (target.classList.contains("fa-trash-can")) {
+    if (target.classList.contains("fa-trash-can") || target.classList.contains("trash-can")) {
         document.querySelectorAll(`div[data-card-id="${id}"]`).forEach(el => el.remove());
         totalCount--;
         document.querySelectorAll(".total-count").forEach(el => {
