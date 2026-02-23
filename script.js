@@ -1,4 +1,3 @@
-console.log("script loaded");
 const allList = document.getElementById("all-list");
 const interviewList = document.getElementById("interview-list");
 const rejectedList = document.getElementById("rejected-list");
